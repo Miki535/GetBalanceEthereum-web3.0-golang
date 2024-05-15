@@ -27,7 +27,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 			fmt.Println("Помилка при підключенні до Ethereum мережі:", err)
 			return
 		}
-		
+
 		address := common.HexToAddress(addres)
 
 		balance, err := client.BalanceAt(context.Background(), address, nil)
